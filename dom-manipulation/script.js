@@ -1,4 +1,5 @@
 document.addEventListener('DOMContentLoaded', function(){
+  localStorage.getItem("quotes", JSON.parse(quotes))
   const quotes = [
   { text: "The only way to do great work is to love what you do.", category: "Inspiration" },
   { text: "Life is what happens when you're busy making other plans.", category: "Life" },
