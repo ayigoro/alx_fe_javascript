@@ -39,6 +39,18 @@ function createAddQuoteForm(){
       }
     }
 
+    function exportQuoteAsJSON (){
+      const jsonData = JSON.stringify(quotes,null,2)
+      const blob = new Blob ([jsonData],{type:"application/json"})
+      const url = URL.createObjectURL(blob)
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "quotes.json"
+      a.click(); 
+      URL.revokeObjectURL(url)
+
+    }
+
     function addQuote (){
       createAddQuoteForm()
     }
