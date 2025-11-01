@@ -16,6 +16,7 @@ const randomIndex = Math.floor(Math.random() * quotes.length)
 const randomQuote = quotes[randomIndex]
 if (quoteDisplay){
    quoteDisplay.innerHTML = `<p>Quote: "${randomQuote.text}"</p><em> Category: ${randomQuote.category}</em>`;
+   sessionStorage.setItem("lastViewedQuote", JSON.stringify(randomQuote));
 }
 }
 function createAddQuoteForm(){
