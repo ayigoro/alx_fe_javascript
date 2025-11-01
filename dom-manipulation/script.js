@@ -39,7 +39,7 @@ function createAddQuoteForm(){
         console.error('Both text and category are required to add a quote')
       }
     }
-
+    // ["Export Quotes"]
     function exportQuoteAsJSON (){
       const jsonData = JSON.stringify(quotes,null,2)
       const blob = new Blob ([jsonData],{type:"application/json"})
