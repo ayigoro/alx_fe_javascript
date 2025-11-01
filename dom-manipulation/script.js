@@ -27,6 +27,11 @@ function createAddQuoteForm(){
           category:newQuoteCategory
         }
         quotes.push(newQuote)
+        localStorage.setItem("quotes", JSON.stringify(quotes));
+        newQuoteText.value = ''
+        newQuoteCategory.value = ''
+        alert('New quote added successfully')
+
       }
       else{
         console.error('Both text and category are required to add a quote')
